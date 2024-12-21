@@ -6,6 +6,13 @@ export default function Home() {
     <main className={styles.main}>
       {/* Hero Section */}
       <section className={styles.hero}>
+        <div className={styles.navbar}>
+          <a href="#home" className={styles.navLink}>Home</a>
+          <a href="#about" className={styles.navLink}>About</a>
+          <a href="#projects" className={styles.navLink}>Projects</a>
+          <a href="#achievements" className={styles.navLink}>Achievements</a>
+          <a href="#contact" className={styles.navLink}>Contact</a>
+        </div>
         <div className={styles.heroContent}>
           <h1 className={styles.title}>Welcome to My Portfolio</h1>
           <p className={styles.subtitle}>Building the Future with Code</p>
@@ -26,7 +33,7 @@ export default function Home() {
       <section className={styles.about} id="about">
         <h2>About Me</h2>
         <p>
-          Im a passionate software developer with a focus on web development.
+          I am a passionate software developer with a focus on web development. 
           I enjoy creating impactful projects and always strive to improve my skills.
         </p>
       </section>
@@ -51,10 +58,16 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Achievements Section */}
+      <section className={styles.achievements} id="achievements">
+        <h2>Achievements</h2>
+        <p>Some of my achievements include...</p>
+      </section>
+
       {/* Contact Section */}
       <section className={styles.contact} id="contact">
         <h2>Contact Me</h2>
-        <p>If youre interested in working together, feel free to reach out!</p>
+        <p>If you are interested in working together, feel free to reach out!</p>
         <a href="mailto:your-email@example.com" className={styles.button}>Contact Me</a>
       </section>
     </main>
