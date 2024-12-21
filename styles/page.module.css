@@ -74,7 +74,8 @@
   top: 20px;
   right: 20px;
   display: flex;
-  gap: 20px;
+  justify-content: space-between; /* Space out links more evenly */
+  gap: 30px; /* Adjust as needed */
 }
 
 .navLink {
@@ -83,6 +84,7 @@
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
+  padding: 0 15px; /* Add padding on the sides */
 }
 
 .navLink:hover {
@@ -211,4 +213,40 @@
 
 .contact a:hover {
   background-color: #005bb5;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .navLinks.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
 }

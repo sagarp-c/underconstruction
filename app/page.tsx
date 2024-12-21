@@ -1,17 +1,32 @@
+"use client";
 import Image from 'next/image';
+import { useState } from 'react';
 import styles from '@/styles/page.module.css';
 
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
   return (
     <main className={styles.main}>
       {/* Hero Section */}
       <section className={styles.hero}>
-        <div className={styles.navbar}>
-          <a href="#home" className={styles.navLink}>Home</a>
-          <a href="#about" className={styles.navLink}>About</a>
-          <a href="#projects" className={styles.navLink}>Projects</a>
-          <a href="#achievements" className={styles.navLink}>Achievements</a>
-          <a href="#contact" className={styles.navLink}>Contact</a>
+         {/* Navbar */}
+      <div className={styles.navbar}>
+          <div className={styles.hamburger} onClick={toggleMenu}>
+            <div className={styles.line}></div>
+            <div className={styles.line}></div>
+            <div className={styles.line}></div>
+          </div>
+          <div className={`${styles.navLinks} ${menuOpen ? styles.active : ''}`}>
+            <a href="#home" className={styles.navLink}>Home</a>
+            <a href="#projects" className={styles.navLink}>Projects</a>
+            <a href="#achievements" className={styles.navLink}>Achievements</a>
+            <a href="#about" className={styles.navLink}>About</a>
+            <a href="#contact" className={styles.navLink}>Contact</a>
+          </div>
         </div>
         <div className={styles.heroContent}>
           <h1 className={styles.title}>Welcome to My Portfolio</h1>
@@ -27,15 +42,6 @@ export default function Home() {
             className={styles.profileImage}
           />
         </div>
-      </section>
-
-      {/* About Section */}
-      <section className={styles.about} id="about">
-        <h2>About Me</h2>
-        <p>
-          I am a passionate software developer with a focus on web development. 
-          I enjoy creating impactful projects and always strive to improve my skills.
-        </p>
       </section>
 
       {/* Projects Section */}
@@ -62,6 +68,15 @@ export default function Home() {
       <section className={styles.achievements} id="achievements">
         <h2>Achievements</h2>
         <p>Some of my achievements include...</p>
+      </section>
+
+      {/* About Section */}
+      <section className={styles.about} id="about">
+        <h2>About Me</h2>
+        <p>
+          I am a passionate software developer with a focus on web development. 
+          I enjoy creating impactful projects and always strive to improve my skills.
+        </p>
       </section>
 
       {/* Contact Section */}
