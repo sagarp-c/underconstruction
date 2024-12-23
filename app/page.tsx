@@ -46,7 +46,7 @@ export default function Home() {
 
       {/* Projects Section */}
       <section className={styles.projects} id="projects">
-        <h2>Featured Projects</h2>
+        <h2>Projects</h2>
         <div className={styles.projectCards}>
           {/* Add dynamic content from the projects data */}
           <div className={styles.card}>
@@ -65,9 +65,14 @@ export default function Home() {
       </section>
 
       {/* Achievements Section */}
-      <section className={styles.achievements} id="achievements">
+     <section className={styles.achievements} id="achievements">
         <h2>Achievements</h2>
         <p>Some of my achievements include...</p>
+      </section>
+      {/* Skills Section */}
+      <section className={styles.skills} id="skills">
+        <h2>Skills</h2>
+        <p>Some of my skils include...</p>
       </section>
 
       {/* About Section */}
