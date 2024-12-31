@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import styles from '@/styles/page.module.css';
+import '@/styles/globals.css';
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
