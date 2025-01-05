@@ -88,8 +88,12 @@ export default function Home() {
       {/* Contact Section */}
       <section className={styles.contact} id="contact">
         <h2>Contact Me</h2>
-        <p>If you are interested in working together, feel free to reach out!</p>
-        <a href="mailto:your-email@example.com" className={styles.button}>Contact Me</a>
+          <div className={styles.contactsocail}>
+            <p>If you are interested in working together, feel free to reach out!</p>
+          </div>
+          <div className={styles.contactlink}>
+            <a href="mailto:your-email@example.com" className={styles.button}>Contact Me</a>
+          </div>
       </section>
     </main>
   );
