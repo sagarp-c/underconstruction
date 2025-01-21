@@ -30,9 +30,9 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.heroContent}>
-          <h1 className={styles.title}>Welcome to My Portfolio</h1>
-          <p className={styles.subtitle}>Building the Future with Code</p>
-          <a href="#projects" className={styles.button}>View Projects</a>
+          <h1 className={styles.title}>Hello.</h1>
+          <p className={styles.subtitle}>-- I&apos;m SAGAR P</p>
+          <a href="#projects" className={styles.button}>Download CV</a>
         </div>
         <div className={styles.heroImage}>
           <Image
@@ -80,7 +80,9 @@ export default function Home() {
       <section className={styles.about} id="about">
         <h2>About Me</h2>
         <p>
-          I am a passionate software developer with a focus on web development. 
+          I am a Computer Science and Engineering student with a passion for technology and innovation.
+          My interests span across Cyber Security,Robotics, Software development, and Problem-solving.
+          Outside of academics and projects, I enjoy collaborating with others, contributing to meaningful initiatives, and sharing my journey through tech.
           I enjoy creating impactful projects and always strive to improve my skills.
         </p>
       </section>
@@ -88,12 +90,8 @@ export default function Home() {
       {/* Contact Section */}
       <section className={styles.contact} id="contact">
         <h2>Contact Me</h2>
-          <div className={styles.contactsocail}>
-            <p>If you are interested in working together, feel free to reach out!</p>
-          </div>
-          <div className={styles.contactlink}>
-            <a href="mailto:your-email@example.com" className={styles.button}>Contact Me</a>
-          </div>
+        <p>If you are interested in working together, feel free to reach out!</p>
+        <a href="mailto:your-email@example.com" className={styles.button}>Contact Me</a>
       </section>
     </main>
   );
