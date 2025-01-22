@@ -218,32 +218,39 @@
   font-size: 1.1rem;
   line-height: 1.6;
 }
+
+
 /* Contact Section */
 .contact {
-  padding: 4rem 2rem;
+  padding: 2rem;
   background-color: #000000;
   color: #ffffff;
-  text-align: center;
-}
-
-.contact h2 {
-  margin-bottom: 2rem;
-  font-size: 2.5rem;
-}
-
-.contactContainer {
+  height: 50vh; /* Maintain the desired height */
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
+  flex-direction: row; /* Layout in two columns */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  gap: 3rem; /* Add spacing between left and right sections */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
+
+.contact-heading {
+  font-size: 3rem; /* Adjust size for prominence */
+  text-align: center; /* Center-align the heading */
+  color: #333; /* Neutral color for visibility */
+  font-weight: bold; /* Make it stand out */
+  margin-bottom: 2rem; /* Add spacing below */
+  text-transform: uppercase; /* Optional: make all letters uppercase */
+  letter-spacing: 2px; /* Add spacing between letters */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
 
 .socialMedia,
 .contactForm {
-  flex: 1;
-  min-width: 150px;
-  max-width: 250px;
-  text-align: left;
+  flex: 1; /* Equal width for both sections */
+  max-width: 400px; /* Limit width for better layout */
 }
 
 .socialMedia h3,
@@ -269,6 +276,7 @@
 
 .socialMedia a:hover {
   text-decoration: underline;
+  color: #0056b3;
 }
 
 .contactForm label {
@@ -279,6 +287,7 @@
 
 .contactForm input,
 .contactForm textarea {
+  height: 2vh;
   width: 100%;
   padding: 0.75rem;
   margin-bottom: 1rem;
@@ -288,8 +297,7 @@
 }
 
 .contactForm button {
-  display: block;
-  width: 100%;
+  width: 50%;
   padding: 0.75rem;
   background-color: #007bff;
   color: #fff;
@@ -297,7 +305,7 @@
   border-radius: 4px;
   font-size: 1.2rem;
   cursor: pointer;
-  text-align: center;
+  transition: background-color 0.3s ease;
 }
 
 .contactForm button:hover {
