@@ -225,7 +225,7 @@
   padding: 2rem;
   background-color: #000000;
   color: #ffffff;
-  height: 50vh; /* Maintain the desired height */
+  min-height: 50vh; /* Dynamic height to prevent overlay */
   width: 100%;
   display: flex;
   flex-direction: row; /* Layout in two columns */
@@ -233,6 +233,8 @@
   align-items: center; /* Center content vertically */
   gap: 3rem; /* Add spacing between left and right sections */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  flex-wrap: wrap; /* Wrap content on smaller screens */
+
 }
 
 .contact-heading {
@@ -251,6 +253,8 @@
 .contactForm {
   flex: 1; /* Equal width for both sections */
   max-width: 400px; /* Limit width for better layout */
+  margin: 1rem; /* Add spacing between sections */
+
 }
 
 .socialMedia h3,
@@ -315,6 +319,10 @@
 
 .contactForm button:hover {
   background-color: #0056b3;
+}
+
+.contact + .about {
+  margin-top: 2rem; /* Ensure no overlap */
 }
 
 /* Hamburger Menu */
@@ -397,5 +405,50 @@
 
   .hamburger {
     display: flex;
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .contact {
+    flex-direction: column; /* Stack sections vertically */
+    gap: 2rem; /* Reduce gap for smaller screens */
+    padding: 1.5rem;
+  }
+
+  .contact-heading {
+    font-size: 2rem; /* Reduce font size for smaller screens */
+  }
+
+  .socialMedia,
+  .contactForm {
+    max-width: 50%; /* Allow sections to take full width */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 1rem;
+  }
+
+  .contact-heading {
+    font-size: 1.8rem; /* Further reduce font size for small screens */
+  }
+
+  .socialMedia a {
+    font-size: 1rem; /* Reduce font size of social media links */
+  }
+
+  .socialMedia a i {
+    font-size: 1.2rem; /* Adjust icon size for smaller screens */
+  }
+
+  .contactForm input,
+  .contactForm textarea {
+    font-size: 0.9rem; /* Adjust font size for inputs */
+  }
+
+  .contactForm button {
+    font-size: 1rem; /* Adjust button font size */
   }
 }
