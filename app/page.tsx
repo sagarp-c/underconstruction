@@ -4,6 +4,10 @@ import { useState } from 'react';
 import styles from '@/styles/page.module.css';
 import '@/styles/globals.css';
 
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
+
+
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -86,16 +90,32 @@ export default function Home() {
           I enjoy creating impactful projects and always strive to improve my skills.
         </p>
       </section>
-      {/*Contact section*/}
-      <section className={styles.contact} id="contact">
-      <h2 className={styles.contactHeading}>Contact Me</h2>
+{/* Contact Section */}
+<section className={styles.contact} id="contact">
+  <h2 className={styles.contactHeading}>Contact Me</h2>
   <div className={styles.socialMedia}>
-    <h3>Connect with Me</h3>
+    <h3>My Accounts</h3>
     <ul>
-      <li><a href="#">Twitter</a></li>
-      <li><a href="#">LinkedIn</a></li>
-      <li><a href="#">GitHub</a></li>
-      <li><a href="#">Instagram</a></li>
+      <li>
+        <a href="https://twitter.com/" target="_blank">
+          <i className="fab fa-twitter"></i> Twitter
+        </a>
+      </li>
+      <li>
+        <a href="https://linkedin.com/" target="_blank">
+          <i className="fab fa-linkedin"></i> LinkedIn
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/" target="_blank">
+          <i className="fab fa-github"></i> GitHub
+        </a>
+      </li>
+      <li>
+        <a href="https://instagram.com/" target="_blank">
+          <i className="fab fa-instagram"></i> Instagram
+        </a>
+      </li>
     </ul>
   </div>
   <div className={styles.contactForm}>
