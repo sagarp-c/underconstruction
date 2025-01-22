@@ -218,53 +218,90 @@
   font-size: 1.1rem;
   line-height: 1.6;
 }
-
 /* Contact Section */
 .contact {
-  padding: 40px 20px;
-  margin-top: 40px;
-  border-radius: 8px;
+  padding: 4rem 2rem;
+  background-color: #000000;
   color: #ffffff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-.contactsocail {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: left;
-}
-
-.contactlink {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: left;
-}
-
 .contact h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
 }
 
-.contact p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
+.contactContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
 }
 
-.contact a {
-  background-color: #0070f3;
-  color: white;
-  padding: 10px 20px;
+.socialMedia,
+.contactForm {
+  flex: 1;
+  min-width: 150px;
+  max-width: 250px;
+  text-align: left;
+}
+
+.socialMedia h3,
+.contactForm h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.socialMedia ul {
+  list-style: none;
+  padding: 0;
+}
+
+.socialMedia li {
+  margin-bottom: 1rem;
+}
+
+.socialMedia a {
+  color: #007bff;
   text-decoration: none;
-  border-radius: 5px;
   font-size: 1.2rem;
-  transition: background-color 0.3s ease;
 }
 
-.contact a:hover {
-  background-color: #005bb5;
+.socialMedia a:hover {
+  text-decoration: underline;
+}
+
+.contactForm label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.contactForm button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.contactForm button:hover {
+  background-color: #0056b3;
 }
 
 /* Hamburger Menu */

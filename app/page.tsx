@@ -87,12 +87,40 @@ export default function Home() {
         </p>
       </section>
 
-      {/* Contact Section */}
-      <section className={styles.contact} id="contact">
-        <h2>Contact Me</h2>
-        <p>If you are interested in working together, feel free to reach out!</p>
-        <a href="mailto:your-email@example.com" className={styles.button}>Contact Me</a>
-      </section>
+{/* Contact Section */}
+<section className={styles.contact} id="contact">
+  <h2>Contact Me</h2>
+  <div className={styles.contactContainer}>
+    {/* Left Division: Social Media */}
+    <div className={styles.socialMedia}>
+      <h3>Connect with Me</h3>
+      <ul>
+        <li><a href="https://twitter.com/your-handle" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+        <li><a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="https://github.com/your-profile" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://instagram.com/your-handle" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+      </ul>
+    </div>
+
+    {/* Right Division: Contact Form */}
+    <div className={styles.contactForm}>
+      <h3>Send Me a Message</h3>
+      <form>
+        <label htmlFor="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label htmlFor="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label htmlFor="message">Message:</label>
+        <textarea id="message" name="message" rows={5} required></textarea>
+
+        <button type="submit" className={styles.button}>Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
     </main>
   );
 }
