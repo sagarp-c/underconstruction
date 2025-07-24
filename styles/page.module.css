@@ -204,16 +204,49 @@ html, body {
 }
 
 
+.aboutContainer {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap; /* makes it wrap on small screens */
+  max-width: 900px;
+}
+
+.aboutText {
+  flex: 1 1 300px; /* grow and shrink, minimum 300px */
+}
+
+.aboutImage {
+  flex: 1 1 300px;
+  max-width: 400px;
+  margin-left: auto; /* Push this div to right */
+  display: flex;
+  justify-content: flex-end; /* optional, aligns image inside the div */
+}
+
 
 .profileImage {
-  display: block; /* images are inline by default */
-  margin-left: auto;
-  margin-right: 0;
-  width: 150px;
-  height: 150px;
   object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: auto;
+  height: auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.iconRow {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.iconRow img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.iconRow img:hover {
+  transform: scale(1.1);
 }
 
 
