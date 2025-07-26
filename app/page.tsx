@@ -4,7 +4,6 @@ import { useState } from 'react';
 import styles from '@/styles/page.module.css';
 import Link from 'next/link';
 
-
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -35,6 +34,8 @@ export default function Home() {
           <p className={styles.subtitle}>Building the Future with Code</p>
           <a href="#projects" className={styles.button}>View Projects</a>
         </div>
+
+        {/* Hero Image */}
         <div className={styles.heroImage}>
           <Image
             src="/assets/images/profile.jpg"
