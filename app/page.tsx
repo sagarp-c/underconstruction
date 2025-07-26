@@ -3,6 +3,10 @@ import Image from 'next/image';
 import { useState } from 'react';
 import styles from '@/styles/page.module.css';
 import Link from 'next/link';
+import { Cinzel } from 'next/font/google';
+
+const cinzel = Cinzel({ subsets: ['latin'], weight: ['800'] });
+
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -30,6 +34,7 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.heroContent}>
+        <h2 className={`${styles.name} ${cinzel.className}`}>Sagar P</h2>
           <h1 className={styles.title}>Welcome to My Portfolio</h1>
           <p className={styles.subtitle}>Building the Future with Code</p>
           <a href="#projects" className={styles.button}>View Projects</a>
